@@ -9,7 +9,7 @@ export type Route = string | ((params?: ApiRouteParams) => string)
 export abstract class Api {
   // todo: can this will need to be defined by the server itself
   // https://github.com/PrefectHQ/orion/issues/667
-  protected server: string = 'https://tenders-001.osc-fr1.scalingo.io/api/' //process.env.PREFECT_API_URL
+  protected server: string = 'https://tenders-001.osc-fr1.scalingo.io/api' //process.env.PREFECT_API_URL
 
   private _config: AxiosRequestConfig | null = null
   private _instance: AxiosInstance | null = null
