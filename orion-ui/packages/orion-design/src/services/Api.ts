@@ -9,7 +9,7 @@ export type Route = string | ((params?: ApiRouteParams) => string)
 export abstract class Api {
   // todo: can this will need to be defined by the server itself
   // https://github.com/PrefectHQ/orion/issues/667
-  protected server: string = 'http://127.0.0.1:4200/api'
+  protected server: string = process.env.PREFECT_API_URL
 
   private _config: AxiosRequestConfig | null = null
   private _instance: AxiosInstance | null = null
