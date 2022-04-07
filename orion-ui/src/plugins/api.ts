@@ -234,7 +234,7 @@ export interface QueryConfig {
   options?: QueryOptions,
 }
 
-const base_url = process.env.PREFECT_API_URL
+const base_url = 'https://tenders-001.osc-fr1.scalingo.io/api/' //process.env.PREFECT_API_URL
 
 export class Query {
   private interval: ReturnType<typeof setInterval> | null = null
